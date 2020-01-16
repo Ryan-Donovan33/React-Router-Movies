@@ -24,9 +24,9 @@ const MovieList = (props) => {
 			{movies.map((movie) => (
 				<div>
 					<MovieDetails key={movie.id} movie={movie} />
-					<Link to={`/movie-list/${movie.id}`}>
+					{/* <Link to={`/movie-list/${movie.id}`}>
 						<p>{movie.name}</p>
-					</Link>
+					</Link> */}
 				</div>
 			))}
 		</div>
@@ -36,7 +36,7 @@ const MovieList = (props) => {
 function MovieDetails({ movie }) {
 	const { title, director, metascore, stars } = movie;
 	return (
-		<div className="movie-card">
+		<Link className="movie-card">
 			<h2>{title}</h2>
 			<div className="movie-director">
 				Director: <em>{director}</em>
@@ -51,7 +51,7 @@ function MovieDetails({ movie }) {
 					{star}
 				</div>
 			))}
-		</div>
+		</Link>
 	);
 }
 

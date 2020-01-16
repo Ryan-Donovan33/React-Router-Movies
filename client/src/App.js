@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
+import Movie from './Movies/Movie';
 
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';

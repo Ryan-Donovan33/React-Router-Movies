@@ -16,14 +16,6 @@ const App = () => {
 		<div>
 			<SavedList list={savedList} />
 
-			<Link className="" exact path="/">
-				Home
-			</Link>
-
-			<Link className="" path="/">
-				Movie List
-			</Link>
-
 			<Route exact path="/" component={MovieList} />
 			<Route path="/movies/:id" component={Movie} />
 		</div>

@@ -7,7 +7,7 @@ const MovieList = () => {
 	useEffect(() => {
 		const getMovies = () => {
 			axios
-				.get('http://localhost:5000/api/movies')
+				.get('http://localhost:5000/api/movies/')
 				.then((response) => {
 					setMovies(response.data);
 				})
@@ -25,7 +25,7 @@ function MovieDetails({ movie }) {
 	const { title, director, metascore, stars } = movie;
 	return (
 		<div className="movie-card">
-			<Link to="/movies/:id">
+			<Link to={`/movies/${movie.id}`}>
 				<h2>{title}</h2>
 				<div className="movie-director">
 					Director: <em>{director}</em>
